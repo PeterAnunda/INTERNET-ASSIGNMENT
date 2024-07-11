@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="registrationForm">
+        <h2>Registration Form</h2>
+        <form id="registerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="userAccount">User Account:</label>
+            <select id="userAccount" name="userAccount">
+                <option value="student">Student</option>
+                <option value="lecturer">Lecturer</option>
+                <option value="admin">Admin</option>
+            </select><br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="button" onclick="register()">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+
+    <div id="loginForm" style="display:none;">
+        <h2>Login Form</h2>
+        <form id="login">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required><br><br>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required><br><br>
+            <label for="loginUserAccount">User Account:</label>
+            <select id="loginUserAccount" name="userAccount">
+                <option value="student">Student</option>
+                <option value="lecturer">Lecturer</option>
+                <option value="admin">Admin</option>
+            </select><br><br>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <div id="homePage" style="display:none;">
+        <h2>Home Page</h2>
+        <p>Welcome, <span id="user"></span>!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
